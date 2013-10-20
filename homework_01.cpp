@@ -22,14 +22,28 @@ inline void sum(int& accum, int Number_of_elements, vector<int> data)
         accum = accum + data[i];
 }
 
+// Variant 1: initialize vector using push_back method
 int main()
 {
     int accum = 0;
-    vector<int> data(Number_of_elements);    // int data[N];
+    vector<int> data;    // int data[N];
     for(int i = 0; i < Number_of_elements; ++i)
-        data[i] = i;
+        data.push_back(i);
 
     sum(accum, Number_of_elements, data);
     cout << "sum is " << accum << endl;  // printf("sum is %d\n", accum);
     return 0;
 }
+
+// Variant 2: initialize vector "array style"
+// int main()
+// {
+//     int accum = 0;
+//     vector<int> data(Number_of_elements);    // int data[N];
+//     for(int i = 0; i < Number_of_elements; ++i)
+//         data[i] = i;
+// 
+//     sum(accum, Number_of_elements, data);
+//     cout << "sum is " << accum << endl;  // printf("sum is %d\n", accum);
+//     return 0;
+// }
